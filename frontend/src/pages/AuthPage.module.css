@@ -1,0 +1,264 @@
+/* ── Shared shell ── */
+.shell {
+  min-height: calc(100vh - 8rem);
+  display: grid;
+  place-items: center;
+  padding: 2rem 1rem 4rem;
+}
+
+/* ── Login box ── */
+.authBox {
+  width: min(680px, 100%);
+  display: grid;
+  gap: 1.8rem;
+  padding: 2.8rem;
+  border-radius: 2rem;
+  background: rgba(7, 14, 28, 0.62);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 32px 72px rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(28px);
+}
+
+.authHeader { text-align: center; }
+
+.authEyebrow {
+  margin: 0 0 0.6rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  font-size: 0.76rem;
+}
+
+.authTitle {
+  margin: 0 0 0.4rem;
+  font-size: clamp(1.6rem, 3vw, 2.2rem);
+  letter-spacing: -0.04em;
+}
+
+.authSub {
+  margin: 0;
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+}
+
+/* ── Role cards ── */
+.roleGrid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.9rem;
+}
+
+.roleCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 1.2rem 0.8rem;
+  border-radius: 1.3rem;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(255, 255, 255, 0.04);
+  color: var(--text-primary);
+  cursor: pointer;
+  text-align: center;
+  transition: border-color 0.18s, background 0.18s;
+}
+
+.roleCard:hover {
+  background: rgba(255, 255, 255, 0.07);
+}
+
+.roleCardActive {
+  border-color: color-mix(in srgb, var(--role-accent, #77e6ff) 50%, transparent);
+  background: color-mix(in srgb, var(--role-accent, #77e6ff) 8%, transparent);
+}
+
+.roleIcon {
+  width: 2.8rem;
+  height: 2.8rem;
+  border-radius: 0.9rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.06);
+  margin-bottom: 0.2rem;
+}
+
+.roleCard strong {
+  display: block;
+  font-size: 0.95rem;
+}
+
+.roleCard p {
+  margin: 0;
+  color: var(--text-secondary);
+  font-size: 0.78rem;
+  line-height: 1.4;
+}
+
+/* ── Form ── */
+.formWrap {
+  display: grid;
+  gap: 1rem;
+  padding-top: 0.4rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.07);
+}
+
+.formLabel {
+  margin: 0;
+  color: var(--text-secondary);
+  font-size: 0.88rem;
+}
+
+.form {
+  display: grid;
+  gap: 0.9rem;
+}
+
+.field {
+  display: grid;
+  gap: 0.4rem;
+}
+
+.field label {
+  color: var(--text-muted);
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+}
+
+.field input,
+.field select,
+.field textarea {
+  width: 100%;
+  padding: 0.9rem 1rem;
+  border-radius: 0.9rem;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(255, 255, 255, 0.05);
+  color: var(--text-primary);
+  font: inherit;
+}
+
+.field select option { color: #0a1020; }
+.field textarea { resize: vertical; }
+
+.submit {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.45rem;
+  padding: 0.95rem 1rem;
+  border-radius: 0.9rem;
+  border: none;
+  font: inherit;
+  font-weight: 700;
+  color: #08101d;
+  background: linear-gradient(135deg, #ffb188, #77e6ff);
+  cursor: pointer;
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.2);
+  transition: transform 0.15s;
+}
+
+.submit:hover { transform: translateY(-1px); }
+.submit:disabled { opacity: 0.55; cursor: not-allowed; transform: none; }
+
+.error {
+  padding: 0.8rem 1rem;
+  border-radius: 0.9rem;
+  background: rgba(255, 109, 128, 0.12);
+  border: 1px solid rgba(255, 109, 128, 0.24);
+  color: #ffc2cc;
+  font-size: 0.9rem;
+}
+
+.footer {
+  text-align: center;
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  margin: 0;
+}
+
+.footer a { color: var(--accent-cool); }
+
+/* ── Register card (reuses same shell) ── */
+.card {
+  width: min(1100px, 100%);
+  display: grid;
+  grid-template-columns: minmax(280px, 1.1fr) minmax(320px, 0.9fr);
+  border-radius: 2rem;
+  overflow: hidden;
+  background: rgba(7, 14, 28, 0.58);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 34px 80px rgba(0, 0, 0, 0.28);
+  backdrop-filter: blur(26px);
+}
+
+.brandPanel {
+  padding: 3rem;
+  background:
+    radial-gradient(circle at top left, rgba(255, 158, 118, 0.22), transparent 38%),
+    radial-gradient(circle at 80% 20%, rgba(72, 215, 255, 0.16), transparent 24%),
+    linear-gradient(180deg, rgba(11, 21, 38, 0.9), rgba(7, 13, 24, 0.82));
+}
+
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.45rem 0.8rem;
+  border-radius: 999px;
+  font-size: 0.74rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.brandPanel h1 {
+  margin: 1.4rem 0 0.85rem;
+  font-size: clamp(2.3rem, 5vw, 4rem);
+  line-height: 0.96;
+  letter-spacing: -0.06em;
+}
+
+.brandPanel p {
+  max-width: 34rem;
+  color: var(--text-secondary);
+  font-size: 1.05rem;
+  line-height: 1.7;
+}
+
+.signals {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.signalCard {
+  padding: 1.1rem;
+  border-radius: 1.25rem;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.signalCard strong { display: block; font-size: 1.5rem; margin-bottom: 0.4rem; }
+.signalCard span { color: var(--text-muted); font-size: 0.92rem; }
+
+.formPanel {
+  padding: 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.formPanel h2 { margin: 0; font-size: 2rem; letter-spacing: -0.05em; }
+
+.subtext { margin-top: 0.65rem; color: var(--text-secondary); }
+
+@media (max-width: 900px) {
+  .card { grid-template-columns: 1fr; }
+  .brandPanel, .formPanel { padding: 2rem; }
+  .roleGrid { grid-template-columns: 1fr; }
+  .authBox { padding: 1.8rem; }
+}

@@ -1,0 +1,17 @@
+{
+  "name": "full-stack-pro",
+  "version": "1.0.0",
+  "description": "Bank Digital Queue Token Management System",
+  "main": "index.js",
+  "scripts": {
+    "dev:backend": "npm run dev --prefix backend",
+    "dev:frontend": "npm run dev --prefix frontend",
+    "dev": "concurrently \"npm run dev:backend\" \"npm run dev:frontend\"",
+    "install:backend": "npm install --prefix backend",
+    "install:frontend": "npm install --prefix frontend",
+    "install-all": "npm install && npm run install:backend && npm run install:frontend"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}

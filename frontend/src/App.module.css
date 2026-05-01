@@ -1,0 +1,48 @@
+.appShell {
+  min-height: 100vh;
+  position: relative;
+  background:
+    radial-gradient(circle at top left, rgba(255, 175, 120, 0.16), transparent 32%),
+    radial-gradient(circle at 80% 20%, rgba(102, 214, 255, 0.14), transparent 28%),
+    linear-gradient(145deg, #07111f 0%, #0e1d32 55%, #07111f 100%);
+  color: var(--text-primary);
+  overflow: hidden;
+}
+
+.ambientGlow,
+.ambientGlowSecondary {
+  position: absolute;
+  width: 28rem;
+  height: 28rem;
+  border-radius: 50%;
+  filter: blur(96px);
+  opacity: 0.42;
+  pointer-events: none;
+}
+
+.ambientGlow {
+  top: -10rem;
+  left: -6rem;
+  background: rgba(255, 134, 94, 0.3);
+}
+
+.ambientGlowSecondary {
+  right: -10rem;
+  top: 8rem;
+  background: rgba(74, 217, 255, 0.22);
+}
+
+.pageFrame {
+  position: relative;
+  z-index: 1;
+  width: min(1320px, calc(100% - 2rem));
+  margin: 0 auto;
+  padding: 2rem 0 3rem;
+}
+
+@media (max-width: 768px) {
+  .pageFrame {
+    width: min(100%, calc(100% - 1rem));
+    padding-bottom: 2rem;
+  }
+}

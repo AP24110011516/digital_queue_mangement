@@ -1,0 +1,156 @@
+.page { display: grid; gap: 1.4rem; }
+
+.pageHeader { padding: 0.4rem 0 0; }
+
+.eyebrow {
+  margin: 0 0 0.4rem;
+  color: var(--text-muted);
+  text-transform: uppercase; letter-spacing: 0.16em; font-size: 0.78rem;
+}
+
+.pageTitle {
+  margin: 0 0 0.35rem;
+  font-size: clamp(1.5rem, 2.5vw, 2.2rem);
+  letter-spacing: -0.03em;
+}
+
+.counterLabel {
+  display: flex; align-items: center; gap: 0.55rem;
+  margin: 0; color: var(--text-secondary); font-size: 0.9rem;
+}
+
+.noCounter {
+  padding: 0.9rem 1rem; border-radius: 0.9rem;
+  background: rgba(255,190,110,0.08);
+  border: 1px solid rgba(255,190,110,0.2); color: #ffe0a0;
+}
+
+.metricRow {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.twoCol {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+/* Active token */
+.activeBlock { display: grid; gap: 1rem; }
+
+.tokenHero { display: grid; gap: 0.4rem; }
+
+.tokenHero span {
+  color: var(--text-muted); text-transform: uppercase;
+  letter-spacing: 0.13em; font-size: 0.74rem;
+}
+
+.tokenHero strong { font-size: 2.2rem; display: block; }
+.tokenHero p { margin: 0; color: var(--text-secondary); }
+
+.serviceTag {
+  display: inline-block;
+  padding: 0.2rem 0.6rem; border-radius: 0.5rem;
+  background: rgba(119,230,255,0.1); color: #77e6ff;
+  font-size: 0.78rem; font-weight: 600; margin: 0;
+}
+
+/* Duration */
+.durationBlock { display: grid; gap: 0.6rem; }
+
+.durationBlock label {
+  color: var(--text-muted); text-transform: uppercase;
+  letter-spacing: 0.12em; font-size: 0.73rem;
+}
+
+.durationRow { display: flex; flex-wrap: wrap; gap: 0.5rem; align-items: center; }
+
+.durationChip {
+  padding: 0.4rem 0.75rem; border-radius: 0.65rem;
+  border: 1px solid rgba(255,255,255,0.1);
+  background: rgba(255,255,255,0.05); color: var(--text-secondary);
+  font-size: 0.83rem; cursor: pointer;
+}
+
+.durationChip.chipActive {
+  border-color: rgba(119,230,255,0.35);
+  background: rgba(119,230,255,0.1); color: #77e6ff;
+}
+
+.durationInput {
+  width: 80px; padding: 0.4rem 0.6rem; border-radius: 0.65rem;
+  border: 1px solid rgba(255,255,255,0.1);
+  background: rgba(255,255,255,0.05); color: var(--text-primary);
+  font-size: 0.83rem;
+}
+
+.durationSet { margin: 0; color: var(--text-secondary); font-size: 0.85rem; }
+
+.secondaryBtn {
+  display: inline-flex; align-items: center; justify-content: center; gap: 0.4rem;
+  width: 100%; padding: 0.75rem 1rem; border-radius: 0.9rem;
+  border: 1px solid rgba(119,230,255,0.25);
+  background: rgba(119,230,255,0.07); color: #77e6ff;
+  font-weight: 600; cursor: pointer;
+}
+
+.secondaryBtn:disabled { opacity: 0.45; cursor: not-allowed; }
+
+.completeBtn {
+  display: inline-flex; align-items: center; justify-content: center; gap: 0.4rem;
+  width: 100%; padding: 0.9rem 1rem; border-radius: 0.9rem;
+  border: none;
+  background: linear-gradient(135deg, #77e6a0, #77e6ff);
+  color: #08101d; font-weight: 700; cursor: pointer;
+}
+
+.completeBtn:disabled { opacity: 0.5; cursor: not-allowed; }
+
+/* Token list */
+.tokenList { display: grid; gap: 0.7rem; }
+
+.tokenRow {
+  display: flex; justify-content: space-between; align-items: flex-start; gap: 0.7rem;
+  padding: 0.85rem 0.9rem; border-radius: 1rem;
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.06);
+}
+
+.tokenInfo { display: grid; gap: 0.25rem; }
+.tokenInfo strong { font-size: 1rem; }
+.tokenInfo p { margin: 0; color: var(--text-secondary); font-size: 0.83rem; }
+
+.badgeRow { display: flex; flex-wrap: wrap; gap: 0.35rem; align-items: center; }
+
+.waitTag {
+  font-size: 0.76rem; padding: 0.18rem 0.5rem; border-radius: 0.45rem;
+  background: rgba(255,190,110,0.1); color: #ffd080;
+}
+
+.acceptBtn {
+  display: inline-flex; align-items: center; gap: 0.35rem;
+  padding: 0.5rem 0.85rem; border-radius: 0.75rem;
+  border: 1px solid rgba(119,230,255,0.28);
+  background: rgba(119,230,255,0.07); color: #77e6ff;
+  font-size: 0.83rem; font-weight: 600; cursor: pointer;
+  white-space: nowrap; flex-shrink: 0;
+}
+
+.acceptBtn:disabled { opacity: 0.4; cursor: not-allowed; }
+
+.error {
+  padding: 0.9rem 1rem; border-radius: 0.9rem;
+  background: rgba(255,109,128,0.1);
+  border: 1px solid rgba(255,109,128,0.22); color: #ffc2cc;
+}
+
+.empty {
+  padding: 0.9rem 1rem; border-radius: 0.9rem;
+  background: rgba(255,255,255,0.03); color: var(--text-secondary);
+}
+
+@media (max-width: 900px) {
+  .twoCol, .metricRow { grid-template-columns: 1fr; }
+}

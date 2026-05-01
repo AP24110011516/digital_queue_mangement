@@ -1,0 +1,184 @@
+.page { display: grid; gap: 1.4rem; }
+
+.pageHeader { padding: 0.4rem 0 0; }
+
+.eyebrow {
+  margin: 0 0 0.4rem;
+  color: var(--text-muted);
+  text-transform: uppercase; letter-spacing: 0.16em; font-size: 0.78rem;
+}
+
+.pageTitle {
+  margin: 0 0 0.35rem;
+  font-size: clamp(1.4rem, 2.5vw, 2rem);
+  letter-spacing: -0.03em;
+}
+
+.pageSub { margin: 0; color: var(--text-secondary); font-size: 0.92rem; }
+
+.metricRow {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.twoCol { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+
+/* ── Service selection ── */
+.serviceGrid {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 0.75rem;
+  margin-bottom: 1.2rem;
+}
+
+.serviceCard {
+  display: flex; flex-direction: column; align-items: center; gap: 0.45rem;
+  padding: 1rem 0.6rem; border-radius: 1.1rem;
+  border: 1px solid rgba(255,255,255,0.08);
+  background: rgba(255,255,255,0.04);
+  color: var(--text-primary); cursor: pointer; text-align: center;
+  transition: border-color 0.15s, background 0.15s;
+}
+
+.serviceCard:hover { background: rgba(255,255,255,0.07); }
+
+.serviceCardActive {
+  border-color: color-mix(in srgb, var(--svc-color, #77e6ff) 50%, transparent);
+  background: color-mix(in srgb, var(--svc-color, #77e6ff) 10%, transparent);
+}
+
+.serviceIcon {
+  width: 2.6rem; height: 2.6rem; border-radius: 0.8rem;
+  display: inline-flex; align-items: center; justify-content: center;
+  background: rgba(255,255,255,0.06);
+}
+
+.serviceCard strong { font-size: 0.85rem; display: block; }
+.serviceCard p { margin: 0; color: var(--text-secondary); font-size: 0.74rem; line-height: 1.35; }
+
+.generateRow {
+  display: flex; align-items: center; justify-content: space-between; gap: 1rem;
+  padding-top: 0.8rem;
+  border-top: 1px solid rgba(255,255,255,0.07);
+}
+
+.selectedInfo { color: var(--text-secondary); font-size: 0.88rem; }
+.selectHint { color: var(--text-muted); font-style: italic; }
+
+.primaryBtn {
+  display: inline-flex; align-items: center; justify-content: center; gap: 0.4rem;
+  padding: 0.85rem 1.6rem; border: none; border-radius: 0.9rem;
+  background: linear-gradient(135deg, #ffb188, #77e6ff);
+  color: #08101d; font-weight: 700; cursor: pointer; white-space: nowrap;
+}
+.primaryBtn:disabled { opacity: 0.5; cursor: not-allowed; }
+
+/* ── Token card ── */
+.tokenCard {
+  display: grid; gap: 0.8rem;
+  padding: 1.3rem; border-radius: 1.3rem;
+  background: linear-gradient(160deg,
+    color-mix(in srgb, var(--svc-color, #77e6ff) 8%, transparent),
+    rgba(255,255,255,0.02));
+  border: 1px solid color-mix(in srgb, var(--svc-color, #77e6ff) 25%, transparent);
+}
+
+.tokenActive { animation: pulse 1.6s ease-in-out infinite alternate; }
+
+@keyframes pulse {
+  from { box-shadow: 0 0 0 rgba(119,230,255,0.06); }
+  to   { box-shadow: 0 0 24px rgba(119,230,255,0.18); }
+}
+
+.serviceBadge {
+  display: inline-flex; align-items: center; gap: 0.35rem;
+  padding: 0.28rem 0.7rem; border-radius: 999px;
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.1);
+  font-size: 0.76rem; font-weight: 600; width: fit-content;
+}
+
+.tokenLabel {
+  color: var(--text-muted); text-transform: uppercase;
+  letter-spacing: 0.14em; font-size: 0.74rem;
+}
+
+.tokenNumber { font-size: clamp(2rem, 4vw, 3rem); display: block; font-weight: 700; }
+
+.badgeRow { display: flex; flex-wrap: wrap; gap: 0.45rem; }
+
+.positionBlock {
+  display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.6rem;
+  padding: 0.8rem; border-radius: 0.9rem;
+  background: rgba(255,255,255,0.04);
+}
+
+.positionItem { text-align: center; }
+.positionItem span { display: block; color: var(--text-muted); font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.1em; }
+.positionItem strong { display: block; font-size: 1.2rem; margin-top: 0.2rem; }
+
+.assignedBlock { padding: 0.7rem 0.9rem; border-radius: 0.8rem; background: rgba(255,255,255,0.04); }
+.assignedBlock p { margin: 0 0 0.2rem; color: var(--text-secondary); font-size: 0.9rem; }
+
+.proceedAlert {
+  padding: 0.8rem 1rem; border-radius: 0.9rem;
+  background: rgba(119,230,255,0.1);
+  border: 1px solid rgba(119,230,255,0.25);
+}
+.proceedAlert strong { display: block; color: #c0f0ff; margin-bottom: 0.25rem; }
+.proceedAlert p { margin: 0; color: var(--text-secondary); font-size: 0.88rem; }
+
+/* QR */
+.qrBlock {
+  display: flex; flex-direction: column; align-items: center; gap: 0.5rem;
+  padding: 0.9rem; border-radius: 1rem;
+  background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.07);
+}
+.qrLabel { margin: 0; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.13em; font-size: 0.73rem; }
+.qrWrap { padding: 0.7rem; border-radius: 0.7rem; background: rgba(255,255,255,0.05); }
+.qrHint { margin: 0; color: var(--text-secondary); font-size: 0.8rem; }
+
+/* Notifications */
+.notifList { display: grid; gap: 0.7rem; }
+.notifCard {
+  display: flex; justify-content: space-between; align-items: flex-start; gap: 0.7rem;
+  padding: 0.85rem 0.9rem; border-radius: 1rem;
+  background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.06);
+}
+.notifCard strong { display: block; font-size: 0.9rem; }
+.notifCard p { margin: 0.2rem 0 0; color: var(--text-secondary); font-size: 0.8rem; }
+.notifCard small { color: var(--text-muted); font-size: 0.75rem; white-space: nowrap; }
+
+/* Feedback */
+.feedbackAlert {
+  padding: 0.75rem 1rem; border-radius: 0.9rem; margin-bottom: 0.8rem;
+  background: rgba(119,230,255,0.08); border: 1px solid rgba(119,230,255,0.2);
+  color: #c0f0ff; font-size: 0.9rem;
+}
+.feedbackForm { display: grid; gap: 0.8rem; }
+.feedbackForm label { color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.13em; font-size: 0.74rem; }
+.feedbackForm textarea {
+  width: 100%; padding: 0.9rem 1rem; border-radius: 0.9rem;
+  border: 1px solid rgba(255,255,255,0.08);
+  background: rgba(255,255,255,0.05); color: var(--text-primary);
+}
+
+.error {
+  padding: 0.9rem 1rem; border-radius: 0.9rem;
+  background: rgba(255,109,128,0.1); border: 1px solid rgba(255,109,128,0.22); color: #ffc2cc;
+}
+.empty {
+  padding: 0.9rem 1rem; border-radius: 0.9rem;
+  background: rgba(255,255,255,0.03); color: var(--text-secondary);
+}
+
+@media (max-width: 1100px) {
+  .serviceGrid { grid-template-columns: repeat(3, 1fr); }
+}
+
+@media (max-width: 900px) {
+  .twoCol, .metricRow { grid-template-columns: 1fr; }
+  .serviceGrid { grid-template-columns: repeat(2, 1fr); }
+  .generateRow { flex-direction: column; align-items: stretch; }
+}

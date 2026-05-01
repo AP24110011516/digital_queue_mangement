@@ -1,0 +1,52 @@
+.badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.42rem 0.78rem;
+  border-radius: 999px;
+  border: 1px solid transparent;
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--text-primary);
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.waiting,
+.normal {
+  color: #ffd5a5;
+  background: rgba(255, 167, 104, 0.12);
+  border-color: rgba(255, 167, 104, 0.25);
+}
+
+.called,
+.active {
+  color: #8ee7ff;
+  background: rgba(80, 217, 255, 0.12);
+  border-color: rgba(80, 217, 255, 0.24);
+}
+
+.completed {
+  color: #97ffcf;
+  background: rgba(117, 255, 193, 0.12);
+  border-color: rgba(117, 255, 193, 0.24);
+}
+
+.expired,
+.inactive {
+  color: #f7a6b3;
+  background: rgba(255, 122, 144, 0.12);
+  border-color: rgba(255, 122, 144, 0.24);
+}
+
+.senior {
+  color: #d1bcff;
+  background: rgba(157, 132, 255, 0.12);
+  border-color: rgba(157, 132, 255, 0.24);
+}
+
+.emergency {
+  color: #ff9186;
+  background: rgba(255, 101, 80, 0.14);
+  border-color: rgba(255, 101, 80, 0.28);
+}

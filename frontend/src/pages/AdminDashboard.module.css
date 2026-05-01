@@ -1,0 +1,200 @@
+.page { display: grid; gap: 1.4rem; }
+
+.pageHeader { padding: 0.4rem 0 0; }
+
+.eyebrow {
+  margin: 0 0 0.4rem;
+  color: var(--text-muted);
+  text-transform: uppercase; letter-spacing: 0.16em; font-size: 0.78rem;
+}
+
+.pageTitle {
+  margin: 0;
+  font-size: clamp(1.5rem, 2.5vw, 2.2rem);
+  letter-spacing: -0.03em;
+}
+
+.metricGrid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+/* Token routing */
+.routingGrid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.tokenList { display: grid; gap: 0.7rem; }
+
+.tokenRow {
+  display: flex; justify-content: space-between; align-items: flex-start; gap: 0.7rem;
+  padding: 0.85rem 0.9rem; border-radius: 1rem;
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.06);
+}
+
+.tokenInfo { display: grid; gap: 0.25rem; }
+.tokenInfo strong { font-size: 1rem; }
+.tokenInfo span { color: var(--text-secondary); font-size: 0.83rem; }
+
+.badgeRow { display: flex; flex-wrap: wrap; gap: 0.35rem; align-items: center; }
+
+.counterTag {
+  font-size: 0.78rem; padding: 0.2rem 0.55rem;
+  border-radius: 0.5rem;
+  background: rgba(119,230,255,0.1);
+  color: #77e6ff;
+}
+
+.assignControl select {
+  padding: 0.45rem 0.7rem;
+  border-radius: 0.7rem;
+  border: 1px solid rgba(255,255,255,0.1);
+  background: rgba(255,255,255,0.06);
+  color: var(--text-primary);
+  font-size: 0.82rem;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.duration {
+  font-size: 0.82rem; color: var(--text-muted);
+  white-space: nowrap; padding-top: 0.2rem;
+}
+
+/* Counter management */
+.managementGrid {
+  display: grid;
+  grid-template-columns: 0.65fr 1.35fr;
+  gap: 1rem;
+}
+
+.form { display: grid; gap: 0.7rem; }
+
+.form label {
+  color: var(--text-muted); text-transform: uppercase;
+  letter-spacing: 0.13em; font-size: 0.74rem;
+}
+
+.form input {
+  width: 100%; padding: 0.85rem 1rem; border-radius: 0.9rem;
+  border: 1px solid rgba(255,255,255,0.08);
+  background: rgba(255,255,255,0.05); color: var(--text-primary);
+}
+
+.form button {
+  display: inline-flex; align-items: center; justify-content: center; gap: 0.4rem;
+  padding: 0.85rem 1rem; border: none; border-radius: 0.9rem;
+  background: linear-gradient(135deg, #ffb188, #77e6ff);
+  color: #08101d; font-weight: 700; cursor: pointer;
+}
+
+.tableWrap { overflow: auto; }
+
+.table { width: 100%; border-collapse: collapse; }
+
+.table th, .table td {
+  text-align: left; padding: 0.8rem 0.4rem;
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+}
+
+.table th {
+  color: var(--text-muted); text-transform: uppercase;
+  letter-spacing: 0.12em; font-size: 0.72rem;
+}
+
+.table select {
+  padding: 0.4rem 0.6rem; border-radius: 0.6rem;
+  border: 1px solid rgba(255,255,255,0.1);
+  background: rgba(255,255,255,0.05); color: var(--text-primary);
+  font-size: 0.82rem;
+}
+
+.toggleBtn {
+  padding: 0.35rem 0.75rem; border-radius: 0.55rem;
+  border: 1px solid rgba(255,255,255,0.1);
+  background: rgba(255,255,255,0.05); color: var(--text-secondary);
+  font-size: 0.78rem; cursor: pointer;
+}
+
+/* Analytics */
+.analyticsGrid {
+  display: grid;
+  grid-template-columns: 1.4fr 0.9fr;
+  gap: 1rem;
+}
+
+/* Feature 1 — Counter performance */
+.sectionLabel {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  font-size: 0.76rem;
+  padding: 0.4rem 0 0;
+}
+
+.counterPerfGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 0.7fr;
+  gap: 1rem;
+}
+
+.fullSpan { grid-column: 1 / -1; }
+
+.chartFrame { position: relative; min-height: 280px; }
+.chartFrameSm { position: relative; min-height: 260px; }
+
+/* Feedback */
+.feedbackHeader {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-bottom: 1rem;
+}
+
+.feedbackHeader span {
+  color: var(--text-muted); text-transform: uppercase;
+  letter-spacing: 0.13em; font-size: 0.74rem; display: block;
+}
+
+.feedbackHeader strong { font-size: 1.8rem; display: block; margin-top: 0.3rem; }
+
+.feedbackStream { display: grid; gap: 0.7rem; }
+
+.feedbackCard {
+  padding: 0.9rem 1rem; border-radius: 1.1rem;
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.06);
+}
+
+.feedbackTop {
+  display: flex; justify-content: space-between; gap: 0.7rem; margin-bottom: 0.4rem;
+}
+
+.feedbackTop strong { display: block; }
+.feedbackTop span { color: var(--text-muted); font-size: 0.82rem; }
+.feedbackCard p { color: var(--text-secondary); margin: 0 0 0.3rem; font-size: 0.88rem; }
+.feedbackCard small { color: var(--text-muted); font-size: 0.78rem; }
+
+.error {
+  padding: 0.9rem 1rem; border-radius: 0.9rem;
+  background: rgba(255,109,128,0.1);
+  border: 1px solid rgba(255,109,128,0.22); color: #ffc2cc;
+}
+
+.empty {
+  padding: 0.9rem 1rem; border-radius: 0.9rem;
+  background: rgba(255,255,255,0.03); color: var(--text-secondary);
+}
+
+@media (max-width: 1100px) {
+  .routingGrid, .metricGrid, .counterPerfGrid { grid-template-columns: 1fr 1fr; }
+  .analyticsGrid, .managementGrid { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 700px) {
+  .routingGrid, .metricGrid, .counterPerfGrid { grid-template-columns: 1fr; }
+}

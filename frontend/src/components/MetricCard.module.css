@@ -1,0 +1,70 @@
+.card {
+  position: relative;
+  padding: 1.2rem;
+  border-radius: 1.45rem;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(255, 255, 255, 0.04);
+  transition: transform 0.24s ease, border-color 0.24s ease;
+}
+
+.card:hover {
+  transform: translateY(-3px);
+  border-color: rgba(255, 255, 255, 0.14);
+}
+
+.card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  opacity: 0.9;
+  pointer-events: none;
+}
+
+.warm::before {
+  background: linear-gradient(145deg, rgba(255, 149, 107, 0.18), transparent 50%);
+}
+
+.cool::before {
+  background: linear-gradient(145deg, rgba(78, 219, 255, 0.18), transparent 50%);
+}
+
+.violet::before {
+  background: linear-gradient(145deg, rgba(145, 128, 255, 0.16), transparent 50%);
+}
+
+.green::before {
+  background: linear-gradient(145deg, rgba(126, 255, 190, 0.16), transparent 50%);
+}
+
+.iconWrap {
+  width: 2.7rem;
+  height: 2.7rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.95rem;
+  background: rgba(255, 255, 255, 0.08);
+  color: var(--text-primary);
+  margin-bottom: 1rem;
+}
+
+.label {
+  margin: 0 0 0.45rem;
+  color: var(--text-muted);
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+}
+
+.value {
+  margin: 0;
+  font-size: clamp(1.8rem, 3vw, 2.4rem);
+  letter-spacing: -0.05em;
+}
+
+.helper {
+  margin: 0.45rem 0 0;
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+}
